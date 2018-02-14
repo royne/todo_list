@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h1>Bienvenido <%= params[:username].capitalize %></h1>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-success btn-lg" id="new">Nueva Tarea</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="pending">
+  <h4>Tareas Pendientes</h4>
+  <div class="jumbotron">
+    <div class="card text-white bg-dark">
+      <div class="card-body">
+        <p class="text-left"><%= params[:username] %></p>
+        <button type="button" class="btn btn-success"><i class="material-icons">assignment_turned_in</i></button>
+        <button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="completed">
+  <h4>Tareas Completadas</h4>
+  <div class="jumbotron">
+    <div class="card text-white bg-dark">
+      <div class="card-body">
+        <p class="text-left"><%= params[:username] %></p>
+        <button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button>
+      </div>
+    </div>
+  </div>
+</div>

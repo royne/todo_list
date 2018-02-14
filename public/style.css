@@ -1,0 +1,9 @@
+.navbar{
+  border-bottom: 1px solid rgba(1, 1, 1, 0.5) !important;
+  border-top: 1.3px solid rgba(1, 1, 1, 0.9) !important;
+  box-shadow: 1px 1px 1px #d378ad;
+}
+
+.position{
+  top: 50px;
+}
