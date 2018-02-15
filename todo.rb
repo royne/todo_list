@@ -16,6 +16,10 @@ get '/task' do
   erb :task
 end
 
+#
+#metodos
+#
+
 #guarda tareas
 def save_task
   if params[:new_task] && params[:new_task]!=""
