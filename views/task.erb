@@ -42,11 +42,13 @@
       <div class="card-body">
         <ul>
           <% mostrar_tarea.each do |tarea| %>
-            <li>
-              <h4><%= tarea["title"] %><h4>
-              <button type="button" class="btn btn-success"><i class="material-icons">assignment_turned_in</i></button>
-              <a href="/delete/<%= tarea["id"] %>"><button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button></a>
-            </li>
+            <% if tarea["done"] == false %>
+              <li>
+                <h4><%= tarea["title"] %><h4>
+                <a href="/task"><button type="button" class="btn btn-success"><i class="material-icons">assignment_turned_in</i></button></a>
+                <a href="/delete/<%= tarea["id"] %>"><button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button></a>
+              </li>
+            <% end %>
           <% end %>
         </ul>
       </div>
@@ -60,8 +62,16 @@
   <div class="jumbotron">
     <div class="card text-white bg-dark">
       <div class="card-body">
-        <p class="text-left"><%= params[:username] %></p>
-        <button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button>
+        <ul>
+          <% mostrar_tarea.each do |tarea| %>
+            <% if tarea["done"] == true %>
+              <li>
+                <h4><%= tarea["title"] %><h4>
+                <a href="/delete/<%= tarea["id"] %>"><button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button></a>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
