@@ -21,6 +21,12 @@ get '/delete/:id' do
   @element = Tarea.find(params[:id])
   erb :delete
 end
+
+get '/complete/:id' do
+  @element = Tarea.find(params[:id])
+  erb :complete
+end
+
 #
 #metodos
 #
@@ -40,4 +46,9 @@ end
 #muestra las tareas
 def mostrar_tarea
   @mostrar_array = Tarea.all
+end
+
+#completar Tareas
+def completar
+  Tarea.update(params[:id])
 end
