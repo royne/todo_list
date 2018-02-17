@@ -12,10 +12,15 @@ end
 
 get '/task' do
   @new_task
+  @mostrar_array
   save_task
   erb :task
 end
 
+get '/delete/:id' do
+  @element = Tarea.find(params[:id])
+  erb :delete
+end
 #
 #metodos
 #
@@ -29,16 +34,10 @@ end
 
 #elimina tareas
 def eliminar
-  Tarea.destroy(5167)
+  Tarea.destroy(params[:id])
 end
 
 #muestra las tareas
 def mostrar_tarea
-  mostrar = Tarea.all
-  @mostrar_array = Array.new
-
-  mostrar.each do |element|
-    @mostrar_array << element['title']
-  end
-  @mostrar_array
+  @mostrar_array = Tarea.all
 end

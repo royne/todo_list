@@ -43,9 +43,9 @@
         <ul>
           <% mostrar_tarea.each do |tarea| %>
             <li>
-              <h4><%= tarea.capitalize %><h4>
+              <h4><%= tarea["title"] %><h4>
               <button type="button" class="btn btn-success"><i class="material-icons">assignment_turned_in</i></button>
-              <button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button>
+              <a href="/delete/<%= tarea["id"] %>"><button type="button" class="btn btn-danger"><i class="material-icons">delete</i></button></a>
             </li>
           <% end %>
         </ul>
