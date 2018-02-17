@@ -1,9 +1,32 @@
+*{
+  font-family: 'Kaushan Script', cursive;
+}
+
+/* index */
+
 .navbar{
   border-bottom: 1px solid rgba(1, 1, 1, 0.5) !important;
   border-top: 1.3px solid rgba(1, 1, 1, 0.9) !important;
-  box-shadow: 1px 1px 1px #d378ad;
+  box-shadow: 1px 1px 1px #000;
+}
+.head {
+  margin-top: 50px ;
+  text-align: center;
+}
+.head h1 , .head-task h1{
+  text-shadow: 1px 1px 1px #000;
+}
+.position{
+  padding: 30px 25px !important;
+  margin-top: 35px ;
+  box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.5);
 }
 
-.position{
-  top: 50px;
+/* task */
+
+.head-task{
+  margin: 25px 0;
+}
+.jumbo-position , .marg{
+  margin-top: 25px;
 }
